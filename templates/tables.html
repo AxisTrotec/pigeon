@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    {{ include('bootstrap.twig') }}
+    <title>{{page_title}}</title>
+</head>
+<body>
+    {{include("header.twig.html")}}
+    {{ include('nav.twig.html') }}
+    <h1>{{heading}}</h1>
+    <style>
+        .generic_table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .generic_table, .generic_table th, .generic_table td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        .generic_table td{
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+    </style>
+    <table class="generic_table">
+        <thead>
+        </thead>
+        <tbody>
+            <tr>{% for key in keys %}
+                {% autoescape false %}
+                 <th>{{ key }}</th>
+                {% endautoescape %}
+                {% endfor %}
+            </tr>
+            
+            {%for rest in table %}
+            <tr>
+                {%for key in keys%}
+                {% autoescape false %}
+                   <td>{{ rest[key] }}</td>
+                   {% endautoescape %}
+                {% endfor %}
+            </tr>            
+            {% endfor %}
+        </tbody>
+
+    <table>
+        {{include('footer.twig.html')}}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<nav>
+    <div class="Nav">
+        <div class="nav">
+            <li> <a href="index.php" class="btn"> [HOME] </a> </li>
+            
+                <div class="menu">
+                    {% for link in nav %}
+                        <a href="{{link.link}}">{{link.text}}</a>
+                    {% endfor %}
+                </div>
+            </li>
+        </div>
+    </div>
+</nav>

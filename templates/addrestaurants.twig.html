@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title> Add: Restaurant </title>
+</head>
+
+<body>
+    <div id="title"> {{ title }} </div>
+    
+    {{include('nav.twig.html')}}
+
+    <form method="post" action="echo.php">
+        <div class="add">
+            <div class="box">
+                <h3> ADD: Restaurant </h3>
+                <label for="restaurant_name">Restaurant Name:</label><input type="text" name="restaurant_name" id="r_name" value="{{restaurant_name}}"><br>
+
+                <label for="phone_number">Phone Number:</label><input type="tel" name="phone_number" id="phone" value="{{phone_number}}"><br>
+
+                <label for="email">Email:</label><input type="email" name="email" id=email value="{{email}}"><br>
+
+                <label for="street_address">Street Address:</label><input type="text" name="street_address" id="address" value="{{street_address}}"><br>
+
+                <label for="city">City:</label><input type="text" name="city" id="city" value="{{city}}"><br>
+
+                <label for="province">Province</label>
+                <select name="province" id="province">
+                    {% for prov in provinces %}
+                    <option value="{{prov}}" {% if prov == province %} selected {% endif %} > {{prov}} </option> 
+                   {% endfor %}
+                </select>
+
+                <input type="submit" id="submit">
+            </div>
+        </div>
+    </form>
+    <footer>
+        {{include('footer.twig.html')}}
+    </footer>
+</body>
+
+</html>

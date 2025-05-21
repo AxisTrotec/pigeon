@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title> Report Infection </title>
+</head>
+
+<body>
+    <div id="title"> {{ title }} </div>
+    
+    {{include('nav.twig.html')}}
+
+    <form method="post" action="post_add_infect.php">
+        <div class="add">
+            <div class="box">
+                <h3> ADD: Infections </h3>
+                <label for="phone_number">Phone Number:</label><input type="tel" name="phone_number" id="phone" value="{{phone_number}}"><br>
+
+                <label for="first_name">First Name:</label><input type="text" name="first_name" id="f_name" value="{{first_name}}"><br>
+
+                <label for="last_name">Last Name:</label><input type="text" name="last_name" id="l_name" value="{{last_name}}"><br>
+
+                <label for="test_center">Test Center:</label>
+                <select name="test_center" id="test_center">
+                    {% for center in testCenters %}
+                    <option value="{{center}}" {% if center == test_center %} selected {% endif %} > {{center}} </option>>
+                    {% endfor %}
+                    {% for test in 1..2 %}
+                    <option value="1">Test</option>
+                    {% endfor %}
+                </select><br>
+
+                <label for="test_date">Test Date:</label><input type="tel" name="test_date" id="test_date" value="{{test_date}}"><br>
+
+                <label for="start_date">Start Date:</label><input type="tel" name="start_date" id="start_date" value="{{start_date}}"><br>
+
+                <label for="end_date">End Date:</label><input type="tel" name="end_date" id="end_date" value="{{end_date}}"><br>
+
+                <input type="submit" id="submit">
+            </div>
+        </div>
+    </form>
+    <footer>
+        {{include('footer.twig.html')}}
+    </footer>
+</body>
+
+</html>

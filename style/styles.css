@@ -1,0 +1,245 @@
+.box{
+  margin: auto;
+  max-width: 600px;
+}
+
+#todo{
+  background-color: hsla(0, 1%, 29%, 0.5);
+  padding: 80px 0;
+  margin-top: 30px;
+  margin-left: 16em;
+  width: 80%;
+}
+
+.column:nth-child( 2n + 1) {
+  background-color: #ff1a1a;
+  color: #ffffff;
+}
+.column:nth-child( 2n + 2) {
+  background-color: #ff3333;
+  color: #ffffff;
+}
+.column > :first-child {
+  background-color: red;
+  color: #ffffff;
+}
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: #242424;
+}
+a {
+  text-decoration: none;
+}
+main {
+  background-color: hsla(0, 1%, 29%, 0.5);
+  padding: 80px 0;
+  margin-top: 30px;
+  margin-left: 16em;
+  width: 80%;
+}
+.first_column {
+  background-color: #00ff80;
+  color: #000000;
+}
+#purpose {
+  color: white;
+}
+#purpose p {
+  text-align: left;
+  text-transform: uppercase;
+}
+#title {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  background-color: #009688;
+  position: unset;
+}
+.Nav {
+  margin-top: 60px;
+  position: fixed;
+  top: 30%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+.nav {
+  border-top: 1px solid;
+  overflow: hidden;
+}
+.btn {
+  display: block;
+  padding: 16px 20px;
+  background: #009688;
+  color: white;
+  position: relative;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #009688;
+  left: 20px;
+  bottom: 7px;
+}
+.menu {
+  background: #009688;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.menu a {
+  display: block;
+  padding: 16px 26px;
+  color: white;
+  font-size: 14px;
+  margin: 4px 0;
+  position: relative;
+}
+.menu a:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #242424;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+.menu a:hover:before {
+  opacity: 1;
+}
+.content:target .menu {
+  max-height: 10em;
+}
+.add {
+  background-color: hsla(0, 1%, 29%, 0.5);
+  padding: 80px 0;
+  margin-top: 30px;
+  margin-left: 16em;
+  width: 80%;
+}
+.box {
+  margin: auto;
+  padding: 0 20px;
+}
+.add h3 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+label {
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+.add button {
+  background: none;
+  color: white;
+  border: 1px solid #70a1ff;
+  padding: 12px 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+#r_name,
+#phone,
+#email,
+#address,
+#city,
+#province,
+#f_name,
+#l_name,
+#timein,
+#timeout,
+#test_center,
+#test_date,
+#start_date,
+#end_date {
+  background-color: hsla(0, 1%, 29%, 0.5);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  color: white;
+  padding: 10px 6px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+#submit {
+  background-color: hsla(0, 1%, 29%, 0.5);
+  border: none;
+  color: white;
+  padding: 10px 6px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+table {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px;
+}
+#table h3,
+#purpose h3 {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+#table {
+  background-color: hsla(0, 1%, 29%, 0.5);
+  padding: 80px 0;
+  margin-top: 30px;
+  margin-left: 16em;
+  width: 80%;
+}
+th {
+  color: #ffffff;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-right: 1px solid;
+  background-color: red;
+}
+td {
+  color: white;
+  text-align: center;
+}
+#button {
+  background-color: hsla(0, 1%, 29%, 0.5);
+  border: none;
+  color: white;
+  padding: 10px 6px;
+  text-align: center;
+}
+#button:hover {
+  background-color: hsla(0, 4%, 84%, 0.5);
+  color: #242424;
+}
+footer {
+  background-color: hsla(0, 1%, 29%, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+

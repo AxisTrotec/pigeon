@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title> Home </title>
+</head>
+
+<body>
+    <div id="title"> {{ title }} </div>
+    
+    {{include('nav.twig.html')}}
+
+    <main>
+        <div id="purpose">
+            <h3> Purpose - </h3> <br>
+            <p> The purpose of this website is to initiate contact tracing. Contract tracing is the process in which
+                restaurants can find potential people an infected person may have been in contact with. </p> <br>
+
+            <h3> Navigate - </h3>
+            <p> ADD: Restaurant - Add restaurant information to the database. <br>
+            ADD: Visit -  Add information on visits to a restaurant to the database. <br> 
+            ADD: Infections - Add information on infected people to the database. <br>
+            LIST: Restaurants - List all restaurant within the database. <br>
+            LIST: Visits - List all the visit from a specific restaurant within the database. <br> 
+            LIST: Infections - List all the infected people within the database. As well as initiate a contact trace for a specific infectee.</p>
+        </div>
+    </main>
+        {{include('footer.twig.html')}}
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div id="title">{{ title }}</div>
+
+    {{include('nav.twig.html')}}
+
+    <div class="add">
+      <label>ToDo</label>
+      <div class="list"></div>
+    </div>
+    <footer>{{include('footer.twig.html')}}</footer>
+  </body>
+</html>

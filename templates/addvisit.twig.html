@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title> Add: Visit </title>
+</head>
+
+<body>
+    <div id="title"> {{ title }} </div>
+    
+    {{include('nav.twig.html')}}
+
+    <form method="post" action="echo.php">
+        <div class="add">
+            <div class="box">
+                <h3> ADD: Visits </h3>
+                <label name="restaurant">Resaurant</label>
+                <select id="r_name" name="restaurant">
+                    {% for rest in restaurants %}
+                    <option value="{{rest["ID"]}}" {% if rest["ID"] == restaurant %} selected {% endif %}>{{rest["name"]}}</option>            
+                    {% endfor %}
+                </select><br>
+
+                <label for="phone">Phone Number:</label><input type="tel" name="phone_number" id="phone" value="{{phone}}"><br>
+
+                <label for="firstname">First Name:</label><input type="text" name="first_name" id="f_name" value="{{firstname}}"><br>
+
+                <label for="lastname">Last Name:</label><input type="text" name="last_name" id="l_name" value="{{lastname}}"><br>
+
+                <label name="timein">Time in</label><input type="datetime-local" name="timein" id="timein" value="{{timein}}" ><br>
+
+                <label name="timeout">Time out</label><input type="datetime-local" name="timeout" id="timeout" value="{{timeout}}" ><br>
+
+                <input type="submit" id="submit">
+            </div>
+        </div>
+    </form>
+    <footer>
+        {{include('footer.twig.html')}}
+    </footer>
+</body>
+
+</html>
